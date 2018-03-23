@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restful JSON</title>
+	<script type="text/javascript">
+		function submit()
+		{
+			var x = document.getElementsByClassName("formdata")
+			var myJ = {}
+			for(var i=0;i<x.length;i++)
+			{
+				myJ[x[i].name]=x[i].value
+			}
+			myJ=JSON.stringify(myJ)
+			var request = new XMLHttpRequest()
+			request.onreadystatechange=function(){
+				if(this.readyState==4 && this.status==200)
+				{
+					document.getElementById("body").innerHTML=this.responseText;
+				}
+			}
+			request.open("POST","/dispDetails",true)
+			request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+			request.send(myJ);
+
+		}
+	</script>
+</head>
+<body bgcolor="00FF00">
+	<div>
+		
+	</div>
+	<div id="body" align="center">
+		<h1>Submit to Server</h1>
+		<form action="javascript:submit()" method="POST">
+			<table align="center">
+				<tr>
+					<td>RollNo</td>
+					<td><input type="text" class="formdata" name="rollno"></td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td><input type="text" class="formdata" name="name"></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="text" class="formdata" name="email"></td>
+				</tr>
+				<tr>
+					<td>Department</td>
+					<td><input type="text" class="formdata" name="dept"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="submit" value="Submit"/></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

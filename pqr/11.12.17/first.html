@@ -1,0 +1,60 @@
+<html>
+	<HEAD> 
+	<TITLE>  WEBPAGE NAME  </TITLE>
+	<link rel= stylesheet type = text/css href = first.css> </link>
+	</HEAD>
+	<BODY id=body1> 
+	<script type="text/javascript">
+		function func()
+		{
+			if(i1.src.indexOf("sc.png")!=-1)
+			{
+				i1.src = "image2.png"
+			}
+			else
+			{
+				i1.src = "sc.png"
+			}
+		}
+		function func2()
+		{
+			document.getElementById('body1').innerHTML = '<!--<html> <head><title>Second Page</title></head>--><body bgcolor=orange><font color="red"> 	Welcome!</font><marquee direction=down> <p align=center> Closed </p> </marquee></body></html>'
+		}
+	</script>
+	<H1 ALIGN = CENTER> 
+		<b> WELCOME</b> 
+		<BR>
+		<TEXTAREA> EDITABLE TEXT AREA </TEXTAREA> </BR> </BR>
+		<BR>
+		<LABEL> LABEL </LABEL> </BR>
+	</H1>
+	<p id=p1> TEST PARGRAPH </p>
+	<UL> 
+		<LI class = undl> One </LI> <LI id = sl> Two </LI> <LI class = undl> Three </LI> </UL> 
+	<h2> <marquee> Nothing to see here </marquee> </h2>
+	<p align=center>
+	<button onClick="func()" >
+	 Switch </button>
+	 </p>
+	<p align=center>
+	<img src = "sc.png" onClick="func()" height=300 width=200 id='i1'> </img> </p>
+	<marquee direction = right>
+	<table border = 12>
+		<tr>
+			<td> item1 </td>
+			<td> data1 </td>
+		</tr>
+		<tr>
+			<td> item2 </td>
+			<td> data2 </td>
+		</tr>
+	</table>
+	</marquee>
+	<h3 align = center> <a href = first.html> <button> REFRESH </button> </a> </h3>
+	<p align=center>
+	<button onClick="document.getElementById('d1').innerHTML = Date()" >
+	Show Date </button>
+	</p>
+	 <button onclick="func2()" > Second Page </button>
+	</BODY>
+</html>

@@ -1,0 +1,27 @@
+h1
+{
+	font-size:30;
+	color: blue;
+}
+li.undl
+{
+	font-size:20;
+	color: orange;
+}
+#sl
+{
+	font-size:25;
+	color: green;
+}
+
+button
+{
+	font-size:20;
+	color: red;
+	background: black;
+}
+#p1
+{
+	border : 3px solid powderblue;
+	margin : 15px;
+}

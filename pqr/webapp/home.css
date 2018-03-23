@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+wrapper {
+    text-align: center;
+}
+#but1 {
+    position: absolute;
+    background-color: #4CAF50;
+    top: 40%;
+    right: 50%;
+    padding: 25px 45px;
+}
+#but2 {
+	position: absolute;
+	background-color: #f44336;
+	top: 25%;
+	right: 50%;
+	padding: 25px 40px;
+		
+}
